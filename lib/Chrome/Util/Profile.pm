@@ -60,7 +60,7 @@ sub list_chrome_profiles {
             next DIR;
         };
         push @rows, {
-            path => "$gc_dir/$prefs_path",
+            path => "$gc_dir/$dir",
             dir  => $dir,
             name => $profile_name,
         };
