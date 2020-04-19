@@ -68,7 +68,7 @@ sub list_chrome_profiles {
     }
 
     unless ($args{detail}) {
-        @rows = [map { $_->{name} } @rows];
+        @rows = map { $_->{name} } @rows;
     }
 
     [200, "OK", \@rows, $resmeta];
