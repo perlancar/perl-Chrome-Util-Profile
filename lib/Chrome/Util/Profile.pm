@@ -45,6 +45,8 @@ sub list_chrome_profiles {
         return [412, "Cannot find chrome directory $chrome_dir"];
     }
 
+    # XXX read $chrome_dir/"Local State" to see list of profiles instead?
+
     my @rows;
     my $resmeta = {};
     local $CWD = $chrome_dir;
