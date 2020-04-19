@@ -67,6 +67,10 @@ sub list_chrome_profiles {
         $resmeta->{'func.raw_prefs'}{$profile_name} = $prefs;
     }
 
+    unless ($args{detail}) {
+        @rows = [map { $_->{name} } @rows];
+    }
+
     [200, "OK", \@rows, $resmeta];
 }
 
